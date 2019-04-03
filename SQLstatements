@@ -1,0 +1,40 @@
+for students 
+
+
+INSERT INTO students VALUES ('101', 'mary' );
+INSERT INTO students VALUES ('102', 'bill');
+INSERT INTO students VALUES ('103', 'susan' );
+INSERT INTO students VALUES ('104', 'karen');
+
+for classes
+
+Insert into classes Values   ( 'java', 'B230', 'mon_am', '1103');
+
+Insert into classes Values   ( 'cSharp', 'B122', 'tue_pm', '1247');
+
+Insert into classes Values   ( 'math', 'B506', 'wed_ev', '1389');
+
+Insert into classes Values   ( 'database', 'B123', 'thu_pm', '1455');
+
+Insert into classes Values   ( 'projmgt', 'B125', 'fri_pm', '1203');
+
+Insert into classes Values   ( 'emergTech', 'B122', 'fri_ev', '1158');
+
+Insert into classes Values   ( 'cSharp', 'B125', 'fri_pm', '1451');
+
+Insert into classes Values   ( 'math', 'B1111', 'wed_am', '1673');
+
+
+Enrollements 
+Insert into enrollements Values   ( '107', '1455');
+Insert into enrollements Values   ( '106', '1158');
+Insert into enrollements Values  ( '107', '1247');
+Insert into enrollements Values  ( '106', '1673');
+Insert into enrollements Values  ( '108', '1247');
+Insert into enrollements Values  ( '108', '1451');
+Insert into enrollements Values  ( '109', '1203');
+
+
+SQL STATEMENT 
+SELECT students.studentName, students.studenyID, classes.className, classes.roomName, classes.dateTime, classes.classId  from 
+students, classes, enrollements where students.studenyId=enrollements.studentId and classes.classId=enrollements.classId;
